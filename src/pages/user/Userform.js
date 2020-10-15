@@ -34,11 +34,11 @@ const UserFormFunc = props => {
 }
 
 const UserForm = (reduxForm({
-    form: 'formUser'
+    form: 'Pode ser qq nome aqui' //isso aqui q vai deixar o input digitável
 }))(UserFormFunc)
 
-const mapStateToProps = state => ({
+const mapStateToProp = state => ({ //mapStateToProp pode ter qq nome serve apenas para alterar o estado
 
 })
 
-export default connect(mapStateToProps, {submitUserAction})(UserForm) 
+export default connect(mapStateToProp, {submitUserAction})(UserForm) //aqui conectamos a alteração do estado, enviamos pra uma API, e fazemos com q a função UserFormFunc utilize o redux-form
