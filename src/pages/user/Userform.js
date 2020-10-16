@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import React from 'react'
 import {submitUserAction} from '../actions/user/UserAction'
 
+//Os dados abaixo fazem parte de um cadastro em uma API
 const UserFormFunc = props => {
 
     const {handleSubmit} = props //handleSubmit é do redux-form
