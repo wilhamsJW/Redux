@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux' //Provider => utiliza context API, que é passar informação a todos os componentes filhos, só que provider faz isso de uma forma mais inteligente, diferente que se vc usasse apenas context API
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './redux/reducers'
 import ReduxThunk from 'redux-thunk'
 import Store from './store/Store'
 import Video from './components/video/Video';
+import Siderbar from './components/siderbar/Siderbar';
 
 //O objetivo do middleware é facilitar o desenvolvimento de aplicações
 //Exemplos comuns de middleware incluem middleware de banco de dados, middleware de servidor de aplicativos, middleware orientado a mensagens, middleware de web 
@@ -31,7 +32,6 @@ ReactDOM.render(
      * no Provider dessa forma => store={Store}
      */}
         <Router>
-            <App />
-            <Video />
+        <App />  
         </Router>
     </Provider>, document.getElementById('root'));

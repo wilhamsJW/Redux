@@ -15,8 +15,6 @@ class App extends Component {
           <Link to="/user" >User</Link> 
           <Link to="/siderbar" > / Siderbar</Link>
           <Link to="/video" > / Vídeo </Link>
-          <Video />
-          <Siderbar />
         </div>
        
         {routesConfig.map((value, key) => {
