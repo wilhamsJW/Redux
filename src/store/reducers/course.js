@@ -1,5 +1,11 @@
+
+
+                                /********************************** 
+                                 *  AQUI É O REDUCER DA APLICAÇÃO *
+                                 * ********************************/
+
 const INITIAL_STATE = {
-    activeLesson: {},   //vai armazenar as informações da lesson ativa, isso é o estado inicial e portanto deve ser vazio, algo do tipo null daria erro
+    activeLesson: "",   //vai armazenar as informações da lesson ativa, isso é o estado inicial e portanto deve ser vazio, algo do tipo null daria erro
     activeModule: {},  //vai armazenar as informações da Module ativa para serem mostradas na view
                       //ambos receberão valores do reducer pela action enviada pelo dispatch, olhe o reducer abaixo e entenda
     modules: [
@@ -31,14 +37,16 @@ const INITIAL_STATE = {
  * com essa ação a gente visualiza o que precisa ser alterado no estado e assim o reducer entrega o state
  * atualizado
  */
-export default function reducer(state = INITIAL_STATE, action) {
+export default function reducer(state = INITIAL_STATE, action) { //action => pode ser qq nome, mas por convenão é action, essa action é a do actions/course.js
+
     console.log("Store,Aqui", action);  //nesse console irá mostrar todos os dados clikado, a id da lesson e a id do module e qual aula foi clikada 
-                                       //a action já vem setada pelo dispatch, o dispatch pega os valores q estão sendo clikados pelo usuário e coloca como parametro pra action ler, essa action é a função valueStore so siderbar
+                                       //a action já vem setada pelo dispatch, o dispatch pega os valores q estão sendo clikados pelo usuário e coloca como parametro pra action ler
 
     if (action.type === 'Dẽ um nome preferido') { //esse 'Dẽ um nome preferido' é um type da action enviada pelo dispatch, ela é uma função do sidebar enviada pelo dispatch 
         return { ...state, 
             activeLesson: action.Aula_escohida, 
-            activeModule: action.valores_do_objeto_escolhido };  
+            activeModule: action.valores_do_objeto_escolhido 
+        };  
     } 
     return state;
 }

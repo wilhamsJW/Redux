@@ -6,7 +6,8 @@ const Video = ({activeModule, activeLesson}) => ( //activeModule, activeLesson =
         <strong>Módulo: {activeModule.title}</strong><br></br>
         <span> Aula: {activeLesson.title}</span><br />
         <span>Data: {activeLesson.date}</span><br />
-        <span>N°: {activeLesson.id}</span>
+        <span>N°: {activeLesson.id}</span><br />
+        <span>Nº do módulo: {activeModule.id}</span>
     </div>
 );
 

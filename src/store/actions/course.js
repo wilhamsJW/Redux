@@ -1,4 +1,4 @@
-//Essa função é a Action do Redux. A view chama a action que chama o dispatch que chama o reducer, o reducer ver os state dos componentes e atualiza os states devolvendo pra view a atualização
+//Essa função é a Action e também o dispatch do Redux. A view chama a action que chama o dispatch que chama o reducer, o reducer ver os state dos componentes e atualiza os states devolvendo pra view a atualização
 //Essa função é responsável por mostrar qual foram os valores escolhidos pelo usuário, valores como: id, titulo ou
 //qq outra informação que se tenha. Essa função tá sendo chamada pelo dispatch
 
